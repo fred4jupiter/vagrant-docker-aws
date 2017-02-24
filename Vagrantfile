@@ -5,7 +5,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/xenial64"
  
  config.vm.provider "virtualbox" do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "1024"]
+    vb.customize ["modifyvm", :id, "--memory", "2048"]
   end  
  
   # install the 'vagrant plugin install vagrant-cachier' vagrant plugin to cache downloaded artifacts
@@ -31,6 +31,7 @@ Vagrant.configure(2) do |config|
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
   config.vm.provision "shell", path: "install_docker.sh" 
   config.vm.provision "shell", path: "install_docker-compose.sh"  
+  config.vm.provision "shell", path: "install_java_maven.sh"
   config.vm.provision "shell", path: "install_aws-cli.sh"  
   config.vm.provision "shell", path: "install_aws-ecs-cli.sh"
 end

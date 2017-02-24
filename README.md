@@ -1,6 +1,6 @@
 # vagrant-docker-aws
 
-Vagrant environment with Docker, Docker Compose and AWS CLI installed.
+Vagrant environment with Java, Maven, Docker, Docker Compose and AWS CLI installed.
 
 ## Starting the vagrant box
 
