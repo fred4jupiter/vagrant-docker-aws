@@ -15,3 +15,12 @@ Connect into the vagrant box with
 ```bash
 vagrant ssh
 ```
+
+## Known issues
+
+If you encounter the problem that you cannot run docker without sudo when you have to restart you VM. 
+
+```bash
+vagrant halt
+vagrant ssh
+```
