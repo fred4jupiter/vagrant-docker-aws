@@ -2,13 +2,13 @@
 
 Vagrant environment with Docker, Docker Compose and AWS ECS CLI installed.
 
-## Starting the vagrant box:
+## Starting the vagrant box
 
 ```bash
 vagrant up
 ```
 
-## Watch running containers
+## Connect into vagrant box
 
 Connect into the vagrant box with
 
