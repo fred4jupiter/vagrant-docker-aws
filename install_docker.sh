@@ -11,4 +11,5 @@ sudo apt-get install docker-engine -y
 sudo service docker start
 sudo groupadd docker
 sudo gpasswd -a ${USER} docker
+sudo gpasswd -a ubuntu docker
 sudo service docker restart
