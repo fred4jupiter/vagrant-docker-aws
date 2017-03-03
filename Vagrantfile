@@ -31,9 +31,9 @@ Vagrant.configure(2) do |config|
 
   # to prevent tty errors
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
-  config.vm.provision "shell", path: "install_docker.sh" 
-  config.vm.provision "shell", path: "install_docker-compose.sh"  
-  config.vm.provision "shell", path: "install_java_maven.sh"
-  config.vm.provision "shell", path: "install_aws-cli.sh"  
-  config.vm.provision "shell", path: "install_aws-ecs-cli.sh"
+  config.vm.provision "shell", path: "scripts/install_docker.sh" 
+  config.vm.provision "shell", path: "scripts/install_docker-compose.sh"  
+  config.vm.provision "shell", path: "scripts/install_java_maven.sh"
+  config.vm.provision "shell", path: "scripts/install_aws-cli.sh"  
+  config.vm.provision "shell", path: "scripts/install_aws-ecs-cli.sh"
 end
