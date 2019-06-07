@@ -2,14 +2,15 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|  
-  config.vm.box = "ubuntu/xenial64"
+  # config.vm.box = "ubuntu/xenial64"
+  config.vm.box = "ubuntu/bionic64"
 # config.vm.box_download_insecure = true
   
-  config.vm.network "forwarded_port", guest: 8080, host: 8080
+  config.vm.network "forwarded_port", guest: 8280, host: 8280
 # config.vm.network "forwarded_port", guest: 8080, host: 8080, host_ip: "127.0.0.1"
  
   config.vm.provider "virtualbox" do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "2048"]
+    vb.customize ["modifyvm", :id, "--memory", "4096"]
   end  
  
   # install the 'vagrant plugin install vagrant-cachier' vagrant plugin to cache downloaded artifacts
