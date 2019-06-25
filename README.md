@@ -1,6 +1,17 @@
 # vagrant-docker-aws
 
-Vagrant environment with Java, Maven, Docker, Docker Compose and AWS CLI installed.
+Vagrant environment with 
+
+* Java
+* Maven
+* Docker
+* Docker Compose
+* AWS CLI
+* AWS ECS CLI
+* NodeJS
+* Serverless Framework
+
+ installed.
 
 ## Starting the vagrant box
 

@@ -43,4 +43,5 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "scripts/install_aws-cli.sh"  
   config.vm.provision "shell", path: "scripts/install_aws-ecs-cli.sh"
   config.vm.provision "shell", path: "scripts/install_nodejs.sh"
+  config.vm.provision "shell", path: "scripts/install_serverless.sh"
 end
