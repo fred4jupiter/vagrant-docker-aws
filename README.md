@@ -31,19 +31,18 @@ After connecting to the running VM you will find the default shared folder withi
 
 > **WARNING**: You have to exit and reconnect via `vagrant ssh` again to use docker command without `sudo`!
 
-
 ## Check if everthing is installed correctly
 
 | Tool | Command |
 |--------|--------|
-| Java | java -version |
-| Maven | mvn -version |
-| Docker | docker run hello-world |
-| Docker Compose | docker-compose version |
-| AWS CLI | aws --version |
-| AWS ECS CLI | aws ecs version |
-| NodeJS | node version |
-| Serverless Framework | serverless version |
+| Java | `java -version` |
+| Maven | `mvn -version` |
+| Docker | `docker version` or `docker run hello-world` |
+| Docker Compose | `docker-compose version` |
+| AWS CLI | `aws --version` |
+| AWS ECS CLI | `ecs-cli --version` |
+| NodeJS | `node --version` |
+| Serverless Framework | `serverless version` |
 
 ## Default Forwarded Ports
 
