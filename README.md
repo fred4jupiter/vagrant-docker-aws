@@ -29,8 +29,6 @@ vagrant ssh
 
 After connecting to the running VM you will find the default shared folder within `/vagrant`.
 
-> **WARNING**: You have to exit and reconnect via `vagrant ssh` again to use docker command without `sudo`!
-
 ## Check if everthing is installed correctly
 
 | Tool | Command |
