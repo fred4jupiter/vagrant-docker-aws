@@ -35,11 +35,11 @@ Vagrant.configure(2) do |config|
   end
 
   # to prevent tty errors
-  config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
-  config.vm.provision "shell", inline: "sudo apt-get update && sudo apt-get install dos2unix" 
+  config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"  
+  config.vm.provision "shell", inline: "sudo apt update -y && sudo apt install dos2unix -y" 
+  config.vm.provision "shell", path: "scripts/install_java_maven.sh"
   config.vm.provision "shell", path: "scripts/install_docker.sh" 
   config.vm.provision "shell", path: "scripts/install_docker-compose.sh"  
-  config.vm.provision "shell", path: "scripts/install_java_maven.sh"
   config.vm.provision "shell", path: "scripts/install_aws-cli.sh"  
   config.vm.provision "shell", path: "scripts/install_aws-ecs-cli.sh"
   config.vm.provision "shell", path: "scripts/install_nodejs.sh"

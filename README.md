@@ -1,6 +1,6 @@
 # vagrant-docker-aws
 
-Vagrant environment with 
+Vagrant environment with
 
 * Java
 * Maven
@@ -29,33 +29,22 @@ vagrant ssh
 
 After connecting to the running VM you will find the default shared folder within `/vagrant`.
 
+> **WARNING**: You have to exit and reconnect via `vagrant ssh` again to use docker command without `sudo`!
+
+
 ## Check if everthing is installed correctly
 
-### Docker
+| Tool | Command |
+|--------|--------|
+| Java | java -version |
+| Maven | mvn -version |
+| Docker | docker run hello-world |
+| Docker Compose | docker-compose version |
+| AWS CLI | aws --version |
+| AWS ECS CLI | aws ecs version |
+| NodeJS | node version |
+| Serverless Framework | serverless version |
 
-You can check if docker is working with
+## Default Forwarded Ports
 
-```bash
-docker run hello-world
-```
-
-You will see an output like this
-
-```bash
-Hello from Docker!
-This message shows that your installation appears to be working correctly.
-```
-
-### AWS CLI
-
-Check the AWS CLI version with
-
-```bash
-aws --version
-```
-
-You will see something like this
-
-```bash
-aws-cli/1.11.13 Python/3.5.2 Linux/4.4.0-64-generic botocore/1.4.70
-```
+* Host: 8080 -> Guest: 8080
