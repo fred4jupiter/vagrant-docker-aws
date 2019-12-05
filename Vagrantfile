@@ -13,6 +13,7 @@ Vagrant.configure(2) do |config|
  
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id, "--memory", "4096"]
+	vb.name = "vagrant-docker-aws"
   end  
  
   # install the 'vagrant plugin install vagrant-cachier' vagrant plugin to cache downloaded artifacts
@@ -43,5 +44,8 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "scripts/install_aws-cli.sh"  
   config.vm.provision "shell", path: "scripts/install_aws-ecs-cli.sh"
   config.vm.provision "shell", path: "scripts/install_nodejs.sh"
-  config.vm.provision "shell", path: "scripts/install_serverless.sh"
+  config.vm.provision "shell", path: "scripts/install_serverless.sh"  
+  config.vm.provision "shell", path: "scripts/install_terraform.sh"
+  config.vm.provision "shell", path: "scripts/install_terragrunt.sh"
+  config.vm.provision "shell", path: "scripts/install_aws_cdk.sh"
 end
