@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "./.vagrant", "/vagrant/.vagrant", mount_options: ["dmode=700,fmode=600"]
  
   config.vm.provider "virtualbox" do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "4096"]
+    vb.customize ["modifyvm", :id, "--memory", "2048"]
 	vb.name = "vagrant-docker-aws"
   end  
  
